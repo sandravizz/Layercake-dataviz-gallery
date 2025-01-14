@@ -3,22 +3,24 @@
 </script>
 
 <svelte:head>
-  <title>Sandravizz</title>
+  <title>Sandraviz</title>
 </svelte:head>
 
 <div class="main">
   <div class="logo-container">
-    <h1>Sandravizz</h1>
+    <h1 class="text-big">Sandravizz</h1>
   </div>
 
   <div id="dek">
-    <p>Below you find a collection of chart examples using layercake.</p>
+    <p class="text-medium">
+      Below you find a collection of chart examples using layercake.
+    </p>
   </div>
 
   <div id="gallery">
     {#each examples as example}
       <div class="gallery-item">
-        <h4 class="title">
+        <h4 class="text-medium">
           <a href="/example/{example.slug}">{example.title}</a>
         </h4>
         <svelte:component this={example.component} />
@@ -38,7 +40,6 @@
     overflow: hidden;
   }
   h1 {
-    font-family: "SignPainter";
     font-size: 61px;
     display: inline-block;
     vertical-align: bottom;
@@ -72,19 +73,8 @@
     width: 100%;
     max-width: 800px;
   }
-  a {
-    text-decoration: none;
-  }
-  .title {
-    margin-bottom: 9px;
-    white-space: nowrap;
-  }
-  .title a {
-    text-decoration: underline;
-    max-width: 415px;
-  }
-  .title a:hover {
-    color: #ff3e00;
+  a:hover {
+    color: var(--pink);
   }
   @media (max-width: 895px) {
     :global(#svelte) {

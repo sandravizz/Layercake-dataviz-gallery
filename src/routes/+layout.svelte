@@ -1,9 +1,9 @@
 <script>
-	import '../app.css';
-	import Nav from './_site-components/Nav.svelte';
+  import "./style/app.css";
+  import Nav from "./Nav.svelte";
 </script>
 
-<Nav/>
+<Nav />
 <main>
-	<slot />
+  <slot />
 </main>
